@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Order</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+    </head>
+    <body>
+        <button type="button" id="order_btn">Order</button>
+        
+        <div id="modal">
+            <div id="modal_header">
+                <p>Замовити</p>
+            </div>
+            <div id="modal_body">
+                <input type="text" placeholder="ПІБ" id="name" class="inp">
+                <input type="text" placeholder="Телефон" id="phone" class="inp right">
+                <div id="date">
+                    <input type="date" class="inp" placeholder="Дата" id="date_val">
+                    <input type="time" class="inp right" id="time">
+                </div>
+                <div id="during"><p class="text" id="timeOfOrder">Час замовлення: </p><select name="houre" id="houre" class="inp">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select><select name="minutes" id="minutes" class="inp right">
+                    <option value="0">00</option>
+                    <option value="30">30</option>
+                </select></div>
+                <div id="optional">
+                    <div id="food">
+                    <p id="food_title" class="left">Харчування: </p>
+                    <textarea id="food_value" cols="25" rows="7"></textarea>
+                </div>
+                <div id="details">
+                    <div id="cinema">
+                        <p id="cinema_title">Фільм: </p>
+                        <input type="text" class="inp" id="cinema_val">
+                    </div>
+                    <div id="people">
+                        <p id="people_title">Кількість людей: </p>
+                        <input type="number" id="countOfPeople" value="3" min="2" class="inp">
+                    </div>
+                </div>
+                </div>
+                <div id="order">
+                    <div id="halls" class="left">
+                    <div id="hall_header">
+                        <p>Зали</p>
+                    </div>
+                    <ul id="hall_list">
+                    </ul>
+                </div>
+                <div id="quests" class="right">
+                   <div id="quest_header">
+                        <p>Квести</p>
+                    </div>
+                    <ul id="quest_list">
+                        
+                    </ul>
+                </div>
+            </div>
+               <p id="price">Ціна: <input type="text" id="price_val" class="inp" readonly>
+                   <button type="button" id="ref"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+               </p>
+               <div id="submit">
+                   <button type="button" id="sub" class="btn">Замовити</button>
+                   <button type="button" id="cancel" class="btn">Відміна</button>
+               </div>
+                </div>
+                
+            <div id="modal_footer"></div>
+        </div>
+        
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
